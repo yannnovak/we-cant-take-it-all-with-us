@@ -265,7 +265,7 @@ main figure .img-wrapper img {
 main hr {
     border: none;
     border-block-start: 1px solid var(--card--color--secondary);
-    margin-block: calc(var(--card--margin) * 2) 0;
+    margin-block: calc(var(--card--margin) * 2) var(--card--margin);
     padding: 0;
     width: 100%;
 }
