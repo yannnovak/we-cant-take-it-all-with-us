@@ -1,0 +1,295 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+
+    0. 	CSS Reset
+	1. 	Variables
+	2.	Typography
+	3. 	Layout Base
+    4. 	Content
+
+-------------------------------------------------------------- */
+
+/* 0. CSS Reset ---------------------------------------------- */
+
+html,
+body {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+address,
+big,
+cite,
+code,
+em,
+font,
+img,
+small,
+strike,
+sub,
+sup,
+li,
+ol,
+ul,
+dl,
+dt,
+dd,
+fieldset,
+form,
+label,
+legend,
+button,
+table,
+caption,
+tr,
+th,
+td {
+	border: none;
+	font-size: inherit;
+	line-height: inherit;
+	margin: 0;
+	padding: 0;
+	text-align: inherit;
+}
+
+blockquote::before,
+blockquote::after {
+	content: "";
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, main, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul, menu {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+* {
+	-webkit-tap-highlight-color: transparent !important;
+}
+
+/* 1. Variables ---------------------------------------------- */
+
+:root {
+    --card--color--primary: #000000;
+    --card--color--secondary: #576B6C;
+    --card--color--tertiary: #eeeeee;
+    --card--color--hover: #d91e18;
+    --card--color--background: #ffffff;
+    --card--static-opacity: 0.6;
+    --card--margin: 1.25rem;
+    --card--polygon: polygon(2px 0, calc(100% - 2px) 0, 100% 2px, 100% calc(100% - 2px), calc(100% - 2px) 100%, 2px 100%, 0 calc(100% - 2px), 0 2px);
+    --card--polygon--start: polygon(30px 0, calc(100% - 2px) 0, 100% 2px, 100% calc(100% - 2px), calc(100% - 2px) 100%, 2px 100%, 0 calc(100% - 2px), 0 30px);
+    --card--polygon--end: polygon(2px 0, calc(100% - 2px) 0, 100% 2px, 100% calc(100% - 30px), calc(100% - 30px) 100%, 2px 100%, 0 calc(100% - 2px), 0 2px);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --card--color--primary: #ffffff;
+        --card--color--secondary: #95a5a6;
+        --card--color--hover: #f22613;
+        --card--color--background: #1b1b1c;
+        --card--static: url("../img/noise-i.png");
+    }
+}
+
+/* 2. Typography --------------------------------------------- */
+
+@font-face {
+    font-family: 'Barlow';
+    src: url('../fonts/barlow/Barlow-Regular.woff2') format('woff2'),
+        url('../fonts/barlow/Barlow-Regular.woff') format('woff');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Barlow';
+    src: url('../fonts/barlow/Barlow-Italic.woff2') format('woff2'),
+        url('../fonts/barlow/Barlow-Italic.woff') format('woff');
+    font-weight: 400;
+    font-display: swap;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Barlow';
+    src: url('../fonts/barlow/Barlow-Medium.woff2') format('woff2'),
+        url('../fonts/barlow/Barlow-Medium.woff') format('woff');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--card--color--background);
+    color: var(--card--color--primary);
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+i,
+em {
+    font-style: italic;
+}
+
+b,
+strong,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+}
+
+::selection {
+    color: var(--card--color--primary);
+    background-color: var(--card--color--tertiary);
+}
+
+/* 3. Layout Base -------------------------------------------- */
+
+html,
+body {
+    height: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5em;
+    min-height: 100%;
+    margin-block: 0;
+    margin-inline: auto;
+    padding-block-start: calc(var(--card--margin) * 2.5);
+    padding-block-end: var(--card--margin);
+    padding-inline: var(--card--margin);
+    max-width: 64em;
+}
+
+/* 4. Content ------------------------------------------------ */
+
+h1 {
+    font-size: clamp(1.5rem, 1.3333rem + 0.8333vw, 2rem);
+    font-weight: 400;
+    line-height: 1.2;
+    margin-block: 0 !important;
+    margin-inline: 0;
+}
+
+h2 {
+    font-size: clamp(1.25rem, 1.0417rem + 0.8333vw, 1.5rem);
+    font-weight: 400;
+    line-height: 1.2;
+    margin-block: 0 1.5em;
+    margin-inline: 0;
+}
+
+h1 em {
+    font-weight: 700;
+}
+
+main * {
+    margin-block-end: var(--card--margin);
+}
+main .big-margin {
+    margin-block-end: calc(var(--card--margin) * 2);
+}
+main figure {
+    margin-block: 0 calc(var(--card--margin) * 3);
+    margin-inline: 0;
+    padding-block: 0;
+    padding-inline: 0;
+}
+main figure figcaption {
+    font-size: 0.875em;
+}
+main figure .img-wrapper {
+    aspect-ratio: 16 / 9;
+    margin-block: 0 calc(var(--card--margin) / 1.5);
+    overflow: hidden;
+    position: relative;
+}
+
+#gallery figure .img-wrapper {
+    clip-path: var(--card--polygon);
+}
+
+#gallery figure:first-child .img-wrapper {
+    clip-path: var(--card--polygon--start);
+}
+
+#gallery figure:last-child .img-wrapper {
+    clip-path: var(--card--polygon--end);
+}
+
+main figure img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+    z-index: 1;
+}
+
+main figure .img-wrapper img {
+    filter: none;
+}
+
+main figure .censorship-notice {
+    display: none;
+}
+
+.censored main figure .img-wrapper img {
+    filter: blur(50px);
+}
+
+.censored main figure .censorship-notice {
+    display: block;
+    font-size: clamp(1rem, 0.8333rem + 0.8333vw, 1.5rem);
+    font-weight: 700;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+    margin-block: 0;
+    margin-inline: auto;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 10;
+}
