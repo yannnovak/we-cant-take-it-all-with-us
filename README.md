@@ -2,7 +2,7 @@
 
 ![Thumbnail for We can’t take it all with us](./assets/src/thumbnail.jpg)
 
-*We can’t take it all with us* is an experimental website created for the Rip Space workshop “Censored Online, Thriving Offline.”
+*We can’t take it all with us* is an experimental website created for the Rip Space workshop “Censored Online, Thriving Offline.” It explores how age verification laws might impact individual artists sharing work that may contain borderline content.
 
 &nbsp;
 
@@ -49,6 +49,6 @@ You can view the artwork here:
 
 ## ℹ️ About the Project
 
-This project was created as part of the “Censored Online, Thriving Offline” workshop series hosted by [rip_space](https://rip.space).  
-Special thanks to Maisa Imamović for the inspiration behind the offline-script.js.  
+This project was created as part of the “Censored Online, Thriving Offline” workshop hosted by [rip_space](https://rip.space).  
+Special thanks to Maisa Imamović for leading the workshop and for providing the original offline-script.js, which I adapted for this project.  
 For other uses, please contact Yann Novak.
