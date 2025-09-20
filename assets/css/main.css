@@ -165,7 +165,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 500;
+    font-weight: 400;
 }
 ::selection {
     color: var(--card--color--primary);
@@ -203,13 +203,13 @@ h1 {
 h2 {
     color: var(--card--color--secondary);
     font-size: clamp(1.25rem, 1.0417rem + 0.8333vw, 1.5rem);
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.2;
     margin-block: 0 1.5em;
     margin-inline: 0;
 }
 h1 em {
-    font-weight: 700;
+    font-weight: 400;
 }
 a {
     color: var(--card--color--primary);
@@ -274,7 +274,7 @@ main figure .censorship-notice {
 .censored main figure .censorship-notice {
     display: block;
     font-size: clamp(1rem, 0.8333rem + 0.8333vw, 1.5rem);
-    font-weight: 700;
+    font-weight: 500;
     inset-block-start: 50%;
     inset-inline-start: 50%;
     margin-block: 0;
