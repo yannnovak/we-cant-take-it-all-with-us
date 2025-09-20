@@ -262,6 +262,13 @@ main figure img {
 main figure .img-wrapper img {
     filter: none;
 }
+main hr {
+    border: none;
+    border-block-start: 1px solid var(--card--color--secondary);
+    margin-block: calc(var(--card--margin) * 2) 0;
+    padding: 0;
+    width: 100%;
+}
 
 /* 6. Offline ------------------------------------------------ */
 
