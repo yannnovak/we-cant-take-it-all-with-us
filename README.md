@@ -8,8 +8,8 @@
 
 ## ✨ Features
 
-- Censorship notice and blur effect when online
-- When offline, censorship notice and blur are automatically removed
+- Age verification notice and blur effect when online
+- When offline, age verification notice and blur are automatically removed
 
 &nbsp;
 
@@ -22,8 +22,8 @@ You can view the artwork here:
 
 ## 🕹️ Usage
 
-- Visit the website online to see the censorship notice and blur effect.
-- Disconnect from the internet (go offline) to see the censorship notice and blur removed automatically.
+- Visit the website online to see the age verification notice and blur effect.
+- Disconnect from the internet (go offline) to see the age verification notice and blur removed automatically.
 
 &nbsp;
 
@@ -49,6 +49,6 @@ You can view the artwork here:
 
 ## ℹ️ About the Project
 
-This project was created as part of the “Censored Online, Thriving Offline” workshop hosted by [rip_space](https://rip.space).  
+This project was created as part of the “Censored Online, Thriving Offline” workshop hosted by [rip_space](https://rip.space).
 Special thanks to Maisa Imamović for leading the workshop and for providing the original offline-script.js, which I adapted for this project.  
 For other uses, please contact Yann Novak.
