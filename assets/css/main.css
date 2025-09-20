@@ -6,7 +6,9 @@
 	1. 	Variables
 	2.	Typography
 	3. 	Layout Base
-    4. 	Content
+    4. 	Typography
+    5. 	Main
+    6. 	Offline
 
 -------------------------------------------------------------- */
 
@@ -60,7 +62,6 @@ td {
 	padding: 0;
 	text-align: inherit;
 }
-
 blockquote::before,
 blockquote::after {
 	content: "";
@@ -98,23 +99,19 @@ html {
 :root {
     --card--color--primary: #000000;
     --card--color--secondary: #576B6C;
-    --card--color--tertiary: #eeeeee;
     --card--color--hover: #d91e18;
     --card--color--background: #ffffff;
-    --card--static-opacity: 0.6;
     --card--margin: 1.25rem;
     --card--polygon: polygon(2px 0, calc(100% - 2px) 0, 100% 2px, 100% calc(100% - 2px), calc(100% - 2px) 100%, 2px 100%, 0 calc(100% - 2px), 0 2px);
     --card--polygon--start: polygon(30px 0, calc(100% - 2px) 0, 100% 2px, 100% calc(100% - 2px), calc(100% - 2px) 100%, 2px 100%, 0 calc(100% - 2px), 0 30px);
     --card--polygon--end: polygon(2px 0, calc(100% - 2px) 0, 100% 2px, 100% calc(100% - 30px), calc(100% - 30px) 100%, 2px 100%, 0 calc(100% - 2px), 0 2px);
 }
-
 @media (prefers-color-scheme: dark) {
     :root {
         --card--color--primary: #ffffff;
         --card--color--secondary: #95a5a6;
         --card--color--hover: #f22613;
         --card--color--background: #1b1b1c;
-        --card--static: url("../img/noise-i.png");
     }
 }
 
@@ -128,7 +125,6 @@ html {
     font-display: swap;
     font-style: normal;
 }
-
 @font-face {
     font-family: 'Barlow';
     src: url('../fonts/barlow/Barlow-Italic.woff2') format('woff2'),
@@ -137,7 +133,6 @@ html {
     font-display: swap;
     font-style: italic;
 }
-
 @font-face {
     font-family: 'Barlow';
     src: url('../fonts/barlow/Barlow-Medium.woff2') format('woff2'),
@@ -146,7 +141,6 @@ html {
     font-display: swap;
     font-style: normal;
 }
-
 body {
     background-color: var(--card--color--background);
     color: var(--card--color--primary);
@@ -159,12 +153,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
 }
-
 i,
 em {
     font-style: italic;
 }
-
 b,
 strong,
 h1,
@@ -175,7 +167,6 @@ h5,
 h6 {
     font-weight: 500;
 }
-
 ::selection {
     color: var(--card--color--primary);
     background-color: var(--card--color--tertiary);
@@ -187,7 +178,6 @@ html,
 body {
     height: 100%;
 }
-
 main {
     display: flex;
     flex-direction: column;
@@ -201,7 +191,7 @@ main {
     max-width: 64em;
 }
 
-/* 4. Content ------------------------------------------------ */
+/* 4. Typography --------------------------------------------- */
 
 h1 {
     font-size: clamp(1.5rem, 1.3333rem + 0.8333vw, 2rem);
@@ -210,18 +200,26 @@ h1 {
     margin-block: 0 !important;
     margin-inline: 0;
 }
-
 h2 {
+    color: var(--card--color--secondary);
     font-size: clamp(1.25rem, 1.0417rem + 0.8333vw, 1.5rem);
     font-weight: 400;
     line-height: 1.2;
     margin-block: 0 1.5em;
     margin-inline: 0;
 }
-
 h1 em {
     font-weight: 700;
 }
+a {
+    color: var(--card--color--primary);
+    transition: color 300ms ease;
+}
+a:hover {
+    color: var(--card--color--hover);
+}
+
+/* 5. Main --------------------------------------------------- */
 
 main * {
     margin-block-end: var(--card--margin);
@@ -244,19 +242,15 @@ main figure .img-wrapper {
     overflow: hidden;
     position: relative;
 }
-
 #gallery figure .img-wrapper {
     clip-path: var(--card--polygon);
 }
-
 #gallery figure:first-child .img-wrapper {
     clip-path: var(--card--polygon--start);
 }
-
 #gallery figure:last-child .img-wrapper {
     clip-path: var(--card--polygon--end);
 }
-
 main figure img {
     display: block;
     height: 100%;
@@ -265,19 +259,18 @@ main figure img {
     width: 100%;
     z-index: 1;
 }
-
 main figure .img-wrapper img {
     filter: none;
 }
 
+/* 6. Offline ------------------------------------------------ */
+
 main figure .censorship-notice {
     display: none;
 }
-
 .censored main figure .img-wrapper img {
     filter: blur(50px);
 }
-
 .censored main figure .censorship-notice {
     display: block;
     font-size: clamp(1rem, 0.8333rem + 0.8333vw, 1.5rem);
