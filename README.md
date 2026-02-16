@@ -40,3 +40,23 @@ You can view the artwork here:
 This project was created as part of the “Censored Online, Thriving Offline” workshop hosted by [rip_space](https://rip.space).
 Special thanks to Maisa Imamović for leading the workshop and for providing the original offline-script.js, which I adapted for this project.  
 For other uses, please contact Yann Novak.
+
+## Project Structure
+```
+we-cant-take-it-all-with-us/
+├── assets/
+│   ├── css/
+│   │   └── main.css
+│   ├── fonts/
+│   │   └── barlow/
+│   │       └── …
+│   ├── js/
+│   │   ├── links.json
+│   │   ├── main.js
+│   │   └── offline-script.js
+│   └── src/
+│       └── …
+├── .gitignore
+├── index.html
+└── README.md
+```
